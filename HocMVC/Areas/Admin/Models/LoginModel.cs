@@ -8,9 +8,12 @@ namespace HocMVC.Areas.Admin.Models
 {
     public class LoginModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập username")]
         public string UserName { set; get; }
+
+        [Required(ErrorMessage = "Bạn chưa nhập password")]
         public string PassWord { set; get; }
+
         public bool Remmember { set; get; }
     }
 }

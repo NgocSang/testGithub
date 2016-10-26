@@ -15,5 +15,8 @@ namespace Model.Framework
 
         [StringLength(30)]
         public string passWord { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long id { get; set; }
     }
 }

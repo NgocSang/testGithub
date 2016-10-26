@@ -1,0 +1,10 @@
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\bin\Debug\Model.dll.config
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\bin\Debug\Model.dll
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\bin\Debug\Model.pdb
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\bin\Debug\EntityFramework.dll
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\bin\Debug\EntityFramework.xml
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\obj\Debug\Model.dll
+C:\Users\Ngoc Sang\Desktop\PTUD Hien Dai\Bai Tap 2012\MVC\HocMVC\Model\obj\Debug\Model.pdb

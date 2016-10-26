@@ -1,5 +1,7 @@
-﻿using HocMVC.Areas.Admin.code;
+﻿
 using HocMVC.Areas.Admin.Models;
+using HocMVC.Common;
+using HocMVC.Dao;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ using System.Web.Security;
 
 namespace HocMVC.Areas.Admin.Controllers
 {
+    
     public class LoginController : Controller
     {
         // GET: Admin/Login
@@ -19,19 +22,37 @@ namespace HocMVC.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(LoginModel model)
+        
+        public ActionResult Login(LoginModel model)
         {
-            //var result = new AccountModel().Login(model.UserName, model.PassWord);
-            if (Membership.ValidateUser(model.UserName, model.PassWord) && ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                //SessionHelper.SetSession(new UserSession() { UserName = model.UserName });
-                FormsAuthentication.SetAuthCookie(model.UserName, model.Remmember);
-                return RedirectToAction("Index", "Home");
+                var result = new UserDao();
+                var count = result.login(model.UserName, Encryptor.MD5Hash(model.PassWord));
+                switch (count)
+                {
+                    case -1:
+                        ModelState.AddModelError("", "Tai khoa chua ton tai");
+                        break;
+                    case -2:
+                        ModelState.AddModelError("", "Tai khoa dang bi khoa");
+                        break;
+                    case 1:
+                        ModelState.AddModelError("", "Mat khau dang nhap sai");
+                        break;
+                    case 2:
+                        var usersesion = result.GetbyID(model.UserName);
+                        var session = new UserLogin();
+                        session.UserName = usersesion.UserName;
+                        session.UserID = usersesion.ID;
+                        Session.Add(CommontStant.USER_SESSION, session);
+                        return RedirectToAction("Index", "Home");
+                        break;
+
+                }
             }
-            else {
-                ModelState.AddModelError("", "Ten dang nhap hoac mat khau khong hop le");
-            }
-            return View(model);
+            
+            return View("Index");
         }
  
         public ActionResult Logout()

@@ -15,7 +15,7 @@ namespace Model
         {
             context = new HocMVCdbConnect();
         }
-        public bool Login(string userName,string password)
+        /*public bool Login(string userName,string password)
         {
             object[] sqlParames =
                 {
@@ -25,6 +25,7 @@ namespace Model
             var res = context.Database.SqlQuery<int>("usp_login @userName, @passWord", sqlParames).SingleOrDefault();
             bool k = Convert.ToBoolean(res);
             return k;
-        }
+
+        }*/
     }
 }
