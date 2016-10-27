@@ -11,3 +11,6 @@ Nhý trên s? không nên mà ph?i làm
     SELECT MaHocSinh
     FROM HocSinh HS joint MonHoc MH on HS.MaMH = MH.MaMH AND HS.Phai = Nam
 D?a vào cay truy v?n t?i ýu
+
+asasvsas
+
