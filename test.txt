@@ -1,0 +1,16 @@
+Hi?n t?i s se có các chú ? nhý sau:
+- SELECT ch? ra các thu?c tính c?n l?y
+
+- Tuy?t ð?i ko s? d?ng in tr? trý?ng h?p b?t kh? kháng.
+- Mu?n k?t b?ng th? s? d?ng l?nh join
+- Th? hai khi join n?u có các ði?u ki?n truy v?n th? dùng ngay trong câu l?nh from
+VD: SELECT MaHocSinh
+    FROM HocSinh HS joint MonHoc MH on HS.MaMH = MH.MaMH
+    WHERE HS.Phai = Nam
+Nhý trên s? không nên mà ph?i làm
+    SELECT MaHocSinh
+    FROM HocSinh HS joint MonHoc MH on HS.MaMH = MH.MaMH AND HS.Phai = Nam
+D?a vào cay truy v?n t?i ýu
+
+asasvsas
+
